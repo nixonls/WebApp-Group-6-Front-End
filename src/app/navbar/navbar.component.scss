@@ -1,0 +1,48 @@
+.logo{
+    img{
+        height: 15vh;
+        width: 20vw;
+        align-content: center;
+    }
+    height: 100%;
+    width: 60%;
+    font-weight: bolder;
+    font-size: 10em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+.login{
+    display: flex;
+    width:20%;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+
+}
+
+.sidebar-button{
+    order: 3;
+    justify-self: flex-end;
+    display: flex;
+    width: 20%;
+}
+
+.example-container{
+    order: 4;
+    height: 100vh;
+
+    .example-sidenav{
+        width: 250px;
+    }
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 100px;
+}
