@@ -9,20 +9,29 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TabComponent } from './tab/tab.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AppRoutingModule } from './app-routing.module';
+
+
+ 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    TabComponent
+    TabComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule, 
     MatCheckboxModule,
-    MatSidenavModule
+    MatSidenavModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

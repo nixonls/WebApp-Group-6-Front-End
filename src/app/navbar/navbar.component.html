@@ -1,25 +1,10 @@
-<div class= "navbar">
-    <mat-drawer-container class="example-container" autosize>
-      <mat-drawer #drawer class="example-sidenav" mode="side">
-        <div>
-            Edbert
-        </div>
-      </mat-drawer>
-    </mat-drawer-container>
-        
-    <div class="example-sidenav-content sidebar-button">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        click
-      </button>
-    </div>
+<div class="topnav" id="myTopnav">
+  <a routerLink= "/" class="active">Home</a>
+  <a routerLink="">Articles</a>
+  <!-- <a href="#contact">Contact</a> -->
+  <div class="login"><a routerLink= "/login">Login/Register</a></div>
+</div>
 
-
-  <div class="logo">
-    <img src="assets/images/Smokoff_logo.png" alt="">
-  </div>
-
-  <div class="login">
-    <div class= "login">LOGIN</div>
-    <div class= "register">REGISTER</div>
-  </div>
+<div class="logo">
+	<img src="assets/images/Smokoff_logo.png" alt="">
 </div>

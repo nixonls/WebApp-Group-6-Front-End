@@ -1,0 +1,49 @@
+body{
+	font-family: sans-serif;
+	background: #d5f0f3;
+}
+
+h1{
+	text-align: center;
+	font-weight: 300;
+}
+
+.login_statement{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.login_box{
+	width: 350px;
+	background: whitesmoke;
+	margin: 80px auto;
+	padding: 30px 20px;
+}
+
+label{
+	font-size: 11pt;
+}
+
+.form_login{
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+
+.login_button{
+	background: red;
+	color: white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+.link{
+	color: #232323;
+	text-decoration: none;
+	font-size: 10pt;
+}
