@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -12,11 +12,17 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing.module';
+
+import { SmokerUiComponent } from './smoker-ui/smoker-ui.component';
+import { TotdBarComponent } from './totd-bar/totd-bar.component';
+import { PlannerComponent } from './planner/planner.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
+import { PlannerInputComponent } from './planner-input/planner-input.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin/admin.component';
-
-
- 
 
 @NgModule({
   declarations: [
@@ -26,8 +32,13 @@ import { AdminComponent } from './admin/admin.component';
     TabComponent,
     LoginComponent,
     RegisterComponent,
+    SmokerUiComponent,
+    TotdBarComponent,
+    PlannerComponent,
+    ProfileComponent,
+    PlannerInputComponent,
     FooterComponent,
-    AdminComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +46,12 @@ import { AdminComponent } from './admin/admin.component';
     MatButtonModule, 
     MatCheckboxModule,
     MatSidenavModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

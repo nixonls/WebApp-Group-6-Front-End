@@ -1,6 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto');
+
+$white: #fafafa;
+$black: #333333;
+$grey: #c5c5c5;
+$red: #de3c3c;
+$redpink: #c76f6f;
+
 *{
-    margin:0;
-    padding:0;
+    font-family: 'Roboto', sans-serif;
+    // margin:0;
+    // padding:0;
+}
+
+body{
+    background-color: $white!important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before{
+    border-color: $red!important;
+    background-color: $red!important;
+}
+
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(222, 60, 60, 0.25)!important;
 }
 @import "~@angular/material/prebuilt-themes/indigo-pink.css"
