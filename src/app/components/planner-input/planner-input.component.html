@@ -1,0 +1,39 @@
+<div class="modal fade" id="plannerInput" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-center" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Plan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form method="POST">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="taskTitle">Task Title </label>
+          <input type="text" class="form-control" placeholder="Write your title e.g. Don't smoke">
+        </div>
+        <div class="form-group">
+          <label for="taskDesc">Description </label>
+          <textarea id="taskDesc" class="form-control" placeholder="Write more about what you want to accomplish."></textarea>
+        </div>
+        <div class="form-group">
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="taskSmoke1" name="taskSmokeRadio" required>
+            <label class="custom-control-label" for="taskSmoke1">Smoke</label>
+            <input type="number" class="form-control" placeholder="3">
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="taskSmoke2" name="taskSmokeRadio" required>
+            <label class="custom-control-label" for="taskSmoke2">No Smoke</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
+        <button type="button" role="submit" class="btn btn-danger"><i class="fas fa-save"></i> Add Plan</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

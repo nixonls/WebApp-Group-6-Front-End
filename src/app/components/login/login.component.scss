@@ -1,7 +1,10 @@
-body{
+.bg-img{
 	font-family: sans-serif;
-	background: #d5f0f3;
+	background-image: url("../../../assets/images/auth_bg.jpeg")!important;
+	background-position: center;
+    background-repeat: no-repeat; 
 }
+
 
 h1{
 	text-align: center;
