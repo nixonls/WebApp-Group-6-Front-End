@@ -7,11 +7,13 @@ import { SmokerUiComponent } from './components/smoker-ui/smoker-ui.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlannerComponent } from './components/planner/planner.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'auth/login', component: LoginComponent },
     { path: 'auth/register', component: RegisterComponent },
+    { path: 'auth/logout', component: LogoutComponent },
     { path: 'dashboard', component: SmokerUiComponent },
     { path: 'dashboard/planner', component: PlannerComponent},
     { path: 'profile', component: ProfileComponent }

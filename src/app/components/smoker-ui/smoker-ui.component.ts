@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { first } from 'rxjs/operators';
+
+import { User } from '../../models/user';
+import { AuthenticationService } from '../../services/authentication.service';
+import { UserService } from '../../services/user.service';
+
 
 @Component({
   selector: 'app-smoker-ui',
@@ -8,18 +14,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./smoker-ui.component.scss']
 })
 export class SmokerUiComponent implements OnInit {
-  smoker_name:string = 'David';
-  smoked = this.getInfo();
+  users: User[] = [];
   
-  constructor(private titleService: Title,
-    private http:HttpClient) {}
+  constructor(private userService: UserService, private titleService: Title) {}
   ngOnInit() {
     this.titleService.setTitle('Smokoff | Dashboard');
-    this.getInfo();
-  }
-
-  public getInfo(){
-    return this.http.get('http://postman-echo.com/get')
+    this.userService.get().pipe(first()).subscribe(users => {
+      this.users = users;
+    });
   }
 
 }

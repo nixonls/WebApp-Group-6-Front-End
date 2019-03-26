@@ -19,6 +19,9 @@ import { PlannerInputComponent } from './components/planner-input/planner-input.
 import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './components/admin/admin.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogoutComponent } from './components/logout/logout.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,8 @@ import { AdminComponent } from './components/admin/admin.component';
     ProfileComponent,
     PlannerInputComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { AdminComponent } from './components/admin/admin.component';
     MatCheckboxModule,
     MatSidenavModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     Title
