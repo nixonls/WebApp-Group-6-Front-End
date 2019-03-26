@@ -7,7 +7,6 @@ import { User } from '../../models/user';
 import { AuthenticationService } from '../../services/authentication.service';
 import { UserService } from '../../services/user.service';
 
-
 @Component({
   selector: 'app-smoker-ui',
   templateUrl: './smoker-ui.component.html',
@@ -19,9 +18,9 @@ export class SmokerUiComponent implements OnInit {
   constructor(private userService: UserService, private titleService: Title) {}
   ngOnInit() {
     this.titleService.setTitle('Smokoff | Dashboard');
-    this.userService.get().pipe(first()).subscribe(users => {
-      this.users = users;
-    });
+  //   this.userService.getUser().pipe(first()).subscribe(users => {
+  //     this.users = users;
+  //   });
   }
 
 }
