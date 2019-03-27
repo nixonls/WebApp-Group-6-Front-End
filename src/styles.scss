@@ -33,9 +33,9 @@ h1, h2, h3, h4, h5, h6{
 // Spinner by @mrrocks from codepen.io
 // This is just to center the spinner
 
-html, body { height: 100%; }
-
-body {
+.spinner {
+   height: 100%;
+   margin: auto;
    display: flex;
    align-items: center;
    justify-content: center;
