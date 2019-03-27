@@ -1,6 +1,6 @@
 {
-  "name": "web-app6",
-  "version": "0.0.0",
+  "name": "smokoff",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -28,7 +28,6 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "rxjs": "^6.4.0",
-    "semantic-ui-css": "^2.4.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

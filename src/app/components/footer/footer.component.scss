@@ -1,16 +1,18 @@
- .footer {
-    position: fixed;
+ @import "../../../assets/variables.scss";
+ 
+ footer {
+    position: relative;
     right: 0;
     left: 0;
     bottom: 0;
     width: 100%;
     padding: 1rem;
-    background-color:#333;
+    color: $white;
+    background-color: $black;
     text-align: center;
   }
 
   .copyright{
     display: flex;
     justify-content: flex-end;
-    color: red;
   }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WebApp6": {
+    "Smokoff": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WebApp6",
+            "outputPath": "dist/Smokoff",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,7 +27,6 @@
               "src/manifest.json"
             ],
             "styles": [
-              "node_modules/semantic-ui-css/semantic.min.css",
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
@@ -69,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WebApp6:build"
+            "browserTarget": "Smokoff:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WebApp6:build:production"
+              "browserTarget": "Smokoff:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WebApp6:build"
+            "browserTarget": "Smokoff:build"
           }
         },
         "test": {
@@ -114,7 +113,7 @@
         }
       }
     },
-    "WebApp6-e2e": {
+    "Smokoff-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -123,11 +122,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WebApp6:serve"
+            "devServerTarget": "Smokoff:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WebApp6:serve:production"
+              "devServerTarget": "Smokoff:serve:production"
             }
           }
         },
@@ -143,5 +142,5 @@
       }
     }
   },
-  "defaultProject": "WebApp6"
+  "defaultProject": "Smokoff"
 }

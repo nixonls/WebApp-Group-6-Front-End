@@ -12,7 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SmokerUiComponent } from './components/smoker-ui/smoker-ui.component';
-import { TotdBarComponent } from './components/totd-bar/totd-bar.component';
+import { TipsBarComponent } from './components/tips-bar/tips-bar.component';
 import { PlannerComponent } from './components/planner/planner.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PlannerInputComponent } from './components/planner-input/planner-input.component';
@@ -36,7 +36,7 @@ import { environment } from '../environments/environment';
     LoginComponent,
     RegisterComponent,
     SmokerUiComponent,
-    TotdBarComponent,
+    TipsBarComponent,
     PlannerComponent,
     ProfileComponent,
     PlannerInputComponent,

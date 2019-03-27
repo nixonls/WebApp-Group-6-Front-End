@@ -1,11 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto');
-
-$white: #fafafa;
-$black: #333333;
-$grey: #c5c5c5;
-$red: #de3c3c;
-$redpink: #c76f6f;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "assets/variables.scss";
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -34,7 +30,7 @@ h1, h2, h3, h4, h5, h6{
 // This is just to center the spinner
 
 .spinner {
-   height: 100%;
+   height: 100vh;
    margin: auto;
    display: flex;
    align-items: center;
@@ -85,6 +81,3 @@ $duration: 1.4s;
 }
 
 // End of Spinner
-
-
-@import "~@angular/material/prebuilt-themes/indigo-pink.css"
