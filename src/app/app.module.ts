@@ -55,7 +55,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    environment.production ? ServiceWorkerModule.register('../ngsw-worker.js') : []
+    environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
   ],
   providers: [
     Title,
