@@ -1,0 +1,14 @@
+{
+    "name": "Smokoff",
+    "short_name": "Smokoff",
+    "description": "Smoking = OFF. Smokoff helps you stop smoking.",  
+    "icons": [{
+      "src": "assets/images/smokoff_webapp.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }],
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#333333"
+  }
