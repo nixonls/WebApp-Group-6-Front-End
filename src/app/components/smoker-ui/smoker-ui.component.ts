@@ -13,14 +13,13 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./smoker-ui.component.scss']
 })
 export class SmokerUiComponent implements OnInit {
-  users: User[] = [];
-  
-  constructor(private userService: UserService, private titleService: Title) {}
+  user:any;
+  constructor(private userService: UserService, private titleService: Title){
+    // user:any  = this.userService.getUser();
+  }
   ngOnInit() {
     this.titleService.setTitle('Smokoff | Dashboard');
-  //   this.userService.getUser().pipe(first()).subscribe(users => {
-  //     this.users = users;
-  //   });
+    this.user = JSON.parse(JSON.stringify(this.userService.getUser()));
+    console.log(this.user);
   }
-
 }

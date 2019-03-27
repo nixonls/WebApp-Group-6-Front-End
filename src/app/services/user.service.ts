@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { User } from '../models/user';
 import { map } from 'rxjs/operators';
@@ -9,14 +9,18 @@ export class UserService {
     
     constructor(private http: HttpClient) { }
 
-    getUser() {
+    public getUser() {
         let options = {
             headers: {
               'Authorization': `Bearer ${JSON.parse(localStorage.getItem('currentUser')).access_token}`
             }
         }
+        let headers = {
+            headers: new HttpHeaders().set('Authorization', `Bearer ${JSON.parse(localStorage.getItem('currentUser')).access_token}`)
+        }
+        return this.http.get('https://backend.smokoff.me/api/auth/me', headers)
+        .subscribe(res => {return res});
 
-        return this.http.get('https://backend.smokoff.me/api/auth/me', options)
-        .subscribe(data => {console.log(data)});
+        // .subscribe(res => {console.log(res)});
     }
 }
