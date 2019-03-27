@@ -9,9 +9,9 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  constructor(private userService: UserService) {}
+  // constructor(private userService: UserService) {}
 // private user:string
   ngOnInit() {
-    this.userService.getUser();
+    // this.userService.getUser();
   }
 }
