@@ -7,7 +7,6 @@ import { SmokerUiComponent } from './components/smoker-ui/smoker-ui.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlannerComponent } from './components/planner/planner.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { LogoutComponent } from './components/logout/logout.component';
 import { AuthGuard } from './services/auth.guard';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
@@ -15,7 +14,6 @@ const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'auth/login', component: LoginComponent },
     { path: 'auth/register', component: RegisterComponent },
-    { path: 'auth/logout', component: LogoutComponent, canActivate: [AuthGuard] },
     { path: 'dashboard', component: SmokerUiComponent, canActivate: [AuthGuard] },
     { path: 'dashboard/planner', component: PlannerComponent, canActivate: [AuthGuard]},
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },

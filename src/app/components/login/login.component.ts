@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
-                  this.router.navigate(['/dashboard']);
+                  window.location.href = '/dashboard';
               },
               error => {
                   this.error = error;

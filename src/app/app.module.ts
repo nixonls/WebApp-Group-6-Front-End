@@ -20,7 +20,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './components/admin/admin.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LogoutComponent } from './components/logout/logout.component';
 import { JwtInterceptor } from './services/jwt.interceptor';
 import { ErrorInterceptor } from './services/error.interceptor';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
@@ -42,7 +41,6 @@ import { environment } from '../environments/environment';
     PlannerInputComponent,
     FooterComponent,
     AdminComponent,
-    LogoutComponent,
     PagenotfoundComponent,
   ],
   imports: [

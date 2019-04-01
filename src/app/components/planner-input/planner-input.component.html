@@ -10,23 +10,27 @@
       <form method="POST">
       <div class="modal-body">
         <div class="form-group">
-          <label for="taskTitle">Task Title </label>
-          <input type="text" class="form-control" placeholder="Write your title e.g. Don't smoke">
-        </div>
-        <div class="form-group">
-          <label for="taskDesc">Description </label>
-          <textarea id="taskDesc" class="form-control" placeholder="Write more about what you want to accomplish."></textarea>
-        </div>
-        <div class="form-group">
+          <label for="taskTitle">Smoke Plan</label>
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="taskSmoke1" name="taskSmokeRadio" required>
-            <label class="custom-control-label" for="taskSmoke1">Smoke</label>
-            <input type="number" class="form-control" placeholder="3">
+            <input type="radio" class="custom-control-input" id="planTypeA" name="planTypeRadio" required>
+            <label class="custom-control-label" for="planTypeA">Plan A</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="taskSmoke2" name="taskSmokeRadio" required>
-            <label class="custom-control-label" for="taskSmoke2">No Smoke</label>
+            <input type="radio" class="custom-control-input" id="planTypeB" name="planTypeRadio" required>
+            <label class="custom-control-label" for="planTypeB">Plan B</label>
           </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="planTypeC" name="planTypeRadio" required>
+            <label class="custom-control-label" for="planTypeC">Plan C</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="planDesc">Description</label>
+          <textarea id="planDesc" class="form-control" placeholder="Write more about what you want to accomplish." disabled></textarea>
+        </div>
+        <div class="form-group">
+          <label for="planDate">Date</label>
+          <input type="date" class="form-control" required>
         </div>
       </div>
       <div class="modal-footer">

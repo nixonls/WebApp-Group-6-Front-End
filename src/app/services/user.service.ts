@@ -19,7 +19,7 @@ export class UserService {
         }
         
         // get method to get user info
-        return this.http.get<User[]>('https://backend.smokoff.me/api/auth/me', headers)
+        return this.http.get<User>('https://backend.smokoff.me/api/auth/me', headers)
         .pipe(map(r => {return r}));
     }
 }

@@ -11,7 +11,7 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./smoker-ui.component.scss']
 })
 export class SmokerUiComponent implements OnInit {
-  user: User[] = [];
+  user: User;
 
   constructor(private userService: UserService, private titleService: Title){
   }
