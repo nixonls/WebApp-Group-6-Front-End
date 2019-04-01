@@ -5,9 +5,6 @@ import { User } from '../models/user';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-    // prepare user model
-    users: User[] = [];
-
     constructor(private http: HttpClient) { }
     // get user function
     getUser() {

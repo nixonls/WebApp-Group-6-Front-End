@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import { User } from '../../models/user';
-import { AuthenticationService } from '../../services/authentication.service';
 import { UserService } from '../../services/user.service';
 
 @Component({
