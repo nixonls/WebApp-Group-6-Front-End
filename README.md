@@ -16,6 +16,7 @@ The main reason of this project is to make a stop smoking website application.
 ## Features in the Website
 
 - Authentication
+- Installable in Mobile Phones (Add to Home Screen Feature)
 - Email Reminder Notification
 - Smoking Planner
 - Articles about smoking
