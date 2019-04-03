@@ -34,20 +34,21 @@ export class AuthenticationService {
     }
 
     logout() {
-        // set token to headers
-        let headers = {
-            headers: {
-              'Authorization': `Bearer ${JSON.parse(localStorage.getItem('currentUser')).access_token}`
-            }
-        }
-        
-        // remove user from local storage to log user out
-        return this.http.post<any>('https://backend.smokoff.me/api/auth/logout', headers)
-            .pipe(map(user => {
-                if (user) {
-                    localStorage.removeItem('currentUser');
-                    this.currentUserSubject.next(null);
-                }
-            }))
+        localStorage.removeItem('currentUser');
+        this.currentUserSubject.next(null);
+        // // set token to headers
+        // let headers = {
+        //     headers: {
+        //       'Authorization': `Bearer ${JSON.parse(localStorage.getItem('currentUser')).access_token}`
+        //     }
+        // }
+
+        // // remove user from local storage to log user out
+        // return this.http.post<any>('https://backend.smokoff.me/api/auth/logout', headers)
+        // .pipe(map(res=>{ if(res){
+        //     localStorage.removeItem('currentUser');
+        //     this.currentUserSubject.next(null);
+        // }
+        // return res}));
     }
 }

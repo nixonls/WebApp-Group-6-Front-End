@@ -115,7 +115,7 @@ hr{
   opacity: 0.3;
 }
 
-input[type=text], input[type=email], input[type=password]{
+input[type=text], input[type=email], input[type=password], input[type=date]{
   width: 200px; 
   height: 39px; 
   -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
@@ -153,7 +153,6 @@ input[type=password]{
 
 .gender {
   margin-left: 30px;
-  margin-bottom: 30px;
 }
 
 .accounttype{

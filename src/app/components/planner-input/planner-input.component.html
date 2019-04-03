@@ -7,35 +7,39 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form method="POST">
+      <form [formGroup]="plannerForm" (ngSubmit)="onSubmit()">
       <div class="modal-body">
         <div class="form-group">
           <label for="taskTitle">Smoke Plan</label>
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="planTypeA" name="planTypeRadio" required>
+            <input type="radio" formControlName="planRadio" class="custom-control-input" id="planTypeA" name="planTypeRadio" required>
             <label class="custom-control-label" for="planTypeA">Plan A</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="planTypeB" name="planTypeRadio" required>
+            <input type="radio" formControlName="planRadio" class="custom-control-input" id="planTypeB" name="planTypeRadio" required>
             <label class="custom-control-label" for="planTypeB">Plan B</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="planTypeC" name="planTypeRadio" required>
+            <input type="radio" formControlName="planRadio" class="custom-control-input" id="planTypeC" name="planTypeRadio" required>
             <label class="custom-control-label" for="planTypeC">Plan C</label>
           </div>
         </div>
         <div class="form-group">
           <label for="planDesc">Description</label>
-          <textarea id="planDesc" class="form-control" placeholder="Write more about what you want to accomplish." disabled></textarea>
+          <textarea id="planDesc" formControlName="planDesc" class="form-control" placeholder="Write more about what you want to accomplish." disabled></textarea>
         </div>
         <div class="form-group">
           <label for="planDate">Date</label>
-          <input type="date" class="form-control" required>
+          <input type="date" formControlName="planDate" class="form-control" required>
+        </div>
+        <div class="custom-control custom-switch">
+          <label class="custom-control-label" for="notificationSwitch">E-mail Notifications</label>
+          <input type="checkbox" formControlName="planNotification" class="custom-control-input" id="notificationSwitch">
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
-        <button type="button" role="submit" class="btn btn-danger"><i class="fas fa-save"></i> Add Plan</button>
+        <button type="submit" [disabled]="!plannerForm.valid" class="btn btn-danger"><i class="fas fa-save"></i> Add Plan</button>
       </div>
       </form>
     </div>

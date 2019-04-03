@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,11 +9,14 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor(private titleService: Title) { }
+  user:User;
+  constructor(private titleService: Title, private userService: UserService) { }
 
   ngOnInit() {
-    this.titleService.setTitle('Smokoff | Register');  // set title page
+    this.titleService.setTitle('Smokoff | Profile');  // set title page
+    this.userService.getUser().subscribe(user => {
+      this.user = user;
+    });
   }
 
 }

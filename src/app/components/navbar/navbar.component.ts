@@ -5,23 +5,31 @@ import { AuthenticationService } from '../../services/authentication.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+	selector: 'app-navbar',
+	templateUrl: './navbar.component.html',
+	styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  user:User;
-  constructor(private authenticationService: AuthenticationService, private router: Router, private userService: UserService) {}
+	user:User;
+	logged_in:User;
+	constructor(
+		private authenticationService: AuthenticationService,
+		private router: Router,
+		private userService: UserService
+		) {
+			this.authenticationService.currentUser.subscribe(res =>{
+				this.logged_in = res;	
+			});
+		}
 
-  ngOnInit() {
-    // subscribe to function and set arrays to the models
-    this.userService.getUser().subscribe(user => {
-      this.user = user;
-    });
-  }
+	ngOnInit() {
+		this.userService.getUser().subscribe(user => {
+			this.user = user;
+		});
+}
 
-  logout(){
-    this.router.navigate(['../']);
-    this.authenticationService.logout();
-   } 
+	logout(){
+		this.authenticationService.logout();
+		this.router.navigate(['../']);
+	 }
 }

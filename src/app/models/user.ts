@@ -5,11 +5,12 @@ export class User {
     email: string;
     email_verified_at: string;
     password: string;
-    age: number;
+    birthday: number;
     gender: string;
-    smoke_status: string;
+    role_id: number;
     exp: number;
     level: number;
+    remember_token: string;
     created_at: string;
     update_at: string;
     token?: string;

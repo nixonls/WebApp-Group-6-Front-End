@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../../services/authentication.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { AuthenticationService } from '../../services/authentication.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+    loginForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
@@ -21,10 +22,14 @@ export class LoginComponent implements OnInit {
       private formBuilder: FormBuilder,
       private route: ActivatedRoute,
       private router: Router,
-      private authenticationService: AuthenticationService
+      private authenticationService: AuthenticationService,
+      private titleService: Title
   ) { }
 
   ngOnInit() {
+      this.titleService.setTitle('Smokoff | Title');  // set title page
+      
+      // forms
       this.loginForm = this.formBuilder.group({
           username: ['', Validators.required],
           password: ['', Validators.required]
@@ -34,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.authenticationService.logout();
 
       // get return url from route parameters or default to '/'
-      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
   }
 
   // convenience getter for easy access to form fields
@@ -53,8 +58,10 @@ export class LoginComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
-                  window.location.href = '/dashboard';
+                // window.location.href = '/dashboard';
+                this.router.navigate([this.returnUrl]); // after login navigate to this url
               },
+              // if error
               error => {
                   this.error = error;
                   console.log(this.error);
