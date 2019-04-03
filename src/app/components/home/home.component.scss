@@ -4,12 +4,24 @@
     display: flex;
 }
 
-.about-title{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 48px;
-    color: red;
+.about-text{
+    color: white;
+    font-weight: bold;
 }
 
 .about{
-    text-align: center;
+    color: whitesmoke;
 }
+
+.jumbo-title{
+    font-size: 60px;
+}
+
+.jumbotron{
+    background-image: url(https://image.freepik.com/free-photo/men-s-hand-is-picking-up-cigarettes_38663-321.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+

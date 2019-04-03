@@ -24,7 +24,7 @@ import { JwtInterceptor } from './services/jwt.interceptor';
 import { ErrorInterceptor } from './services/error.interceptor';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
-import { ServiceWorkerModule } from '@angular/service-worker';
+// import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -53,7 +53,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
+    // environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
   ],
   providers: [
     Title,
