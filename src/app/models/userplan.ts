@@ -4,6 +4,7 @@ export class UserPlan{
     plan_id: number;
     status: string;
     date: Date;
+    notif_status: number;
     created_at: string;
     update_at: string;
 }

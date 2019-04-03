@@ -17,6 +17,7 @@
                     <th scope="col">Date</th>
                     <th scope="col">Plan Name</th>
                     <th scope="col">Description</th>
+                    <th scope="col">Notification</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -26,6 +27,13 @@
                         <th scope="row">{{userplan.date}}</th>
                         <td>Plan {{plan[userplan.plan_id-1].type}}</td>
                         <td>{{plan[userplan.plan_id-1].plan_description}}</td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                            <input disabled type="checkbox" class="custom-control-input" id="notificationSwitch" 
+                            [checked]="userplan.notif_status==1">
+                            <label class="custom-control-label" for="notificationSwitch"></label>
+                            </div>                        
+                        </td>
                         <td><button role="button" class="btn"><i class="fas fa-times-circle"></i></button></td>
                     </tr>
                 </ng-container>

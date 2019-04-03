@@ -1,27 +1,32 @@
 <a href="https://smokoff.me">![smokr4_logo](https://user-images.githubusercontent.com/32058555/55397605-ce754200-5570-11e9-90a3-02da14edabb3.png)</a>
 
 ## About this repository
-This is the project repository of our group 6 web application development and security class at Binus International batch 2021.
+This is the project repository of our group 6 Web application development and security class at Binus International batch 2021.
+Team Members:
+- David Honasan         2101693933
+- Frendy Bodhi Susanto  2101693883
+- Nixon Louis           2101693523
+
 The main reason of this project is to make a stop smoking website application.
 - It's SOA, Service Oriented Architecture
 - This is only the front-end part
-- Use Angular as the framework for the front-end
-- Use html, css, and bootsrap for customization
+- Uses Angular as the framework for the front-end
+- Uses HTML, CSS, and Bootstrap for customization
 
 ## Features in the Website
 
--Login & Logout
--Email reminder
--Smoking Planner
--Articles on smoking
+- Authentication
+- Email Reminder Notification
+- Smoking Planner
+- Articles about smoking
 
 ## How to use this
 
-- Setup the environment (angular) <a href=https://angular.io/guide/quickstart</a>
+- Setup the environment (Angular) -> <a href="https://angular.io/guide/quickstart">Quick Start Guide</a>
 - Clone the repository to your local machine
-- open your command promt/terminal
-- open the file location from your command promt/terminal
-- open your code editor/ IDE to configure the code (The app will automatically reload if you change any of the source files.)
+- open your command prompt/terminal
+- open the file location from your command prompt / terminal
+- open your code editor / IDE to configure the code (The app will automatically reload if you change any of the source files.)
 
 ## Development server
 
@@ -34,14 +39,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further information
 

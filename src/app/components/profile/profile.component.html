@@ -1,36 +1,37 @@
 <div class="container h-100">
   <h2 class="mt-3">Profile</h2>
   <a class="btn btn-secondary" routerLink="../dashboard"><i class="fas fa-angle-left"></i> Back</a>
-  <form>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div class="form-row mt-3">
       <label for="emailaddress">Email Address</label>
-      <input type="email" class="form-control" id="emailaddress" placeholder="name@example.com" attr.value="{{user.email}}">
+      <input type="email"formControlName="email" class="form-control" id="emailaddress" placeholder="name@example.com" [value]="user.email" required>
     </div>
     <div class="form-row mt-3">
       <label for="name">First Name</label>
-      <input type="text" class="form-control" id="name" placeholder="First Name" attr.value="{{user.first_name}}">
+      <input type="text"formControlName="fname" class="form-control" id="name" placeholder="First Name" [value]="user.first_name" required>
     </div>
     <div class="form-row mt-3">
       <label for="name">Last Name</label>
-      <input type="text" class="form-control" id="name" placeholder="Last Name" attr.value="{{user.last_name}}">
+      <input type="text"formControlName="lname" class="form-control" id="name" placeholder="Last Name" [value]="user.last_name">
     </div>
     <div class="form-row mt-3">
       <label for="birthday">Birthday</label>
-      <input type="date" class="form-control" id="birthday" placeholder="Birthday" attr.value="{{user.birthday}}">
+      <input type="date"formControlName="birthday" class="form-control" id="birthday" placeholder="Birthday" [value]="user.birthday" required>
     </div>
     <div class="form-row mt-3">
       <label>Gender</label>
     </div>
     <div class="form-row">
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="gender1" name="gender" [attr.checked]="user.gender=='Male' ? 'checked' : null">
+        <input type="radio"formControlName="gender" class="custom-control-input" id="gender1" name="gender" [checked]="user.gender=='Male'" required>
         <label class="custom-control-label"for="gender1">Male</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="gender2" name="gender" [attr.checked]="user.gender=='Female' ? 'checked' : null">
+        <input type="radio"formControlName="gender" class="custom-control-input" id="gender2" name="gender" [checked]="user.gender=='Female'" required>
         <label class="custom-control-label"for="gender2">Female</label>
       </div>
     </div>
-    <button type="submit" class="btn btn-danger btn-block my-3">Save</button>
+    <div *ngIf="success" class="alert alert-success mt-3">Profile has been edited!</div>
+    <button type="submit" [disabled]="!profileForm.valid" class="btn btn-danger btn-block my-3">Save</button>
   </form>
 </div>

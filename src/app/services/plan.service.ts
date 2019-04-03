@@ -14,22 +14,22 @@ export class PlanService {
   userplan:UserPlan[];
   plan:Plan[];
 
-  constructor(private http:HttpClient, private userService:UserService) { }
-  getUserPlans() {
+  constructor(private http:HttpClient, private userService:UserService) { 
     this.userService.getUser().subscribe(user => {    // get user
       this.user = user;
     }); 
-
+   }
+  getUserPlans() {
     // set token to headers
-    let headers = {
+    let options = {
         headers: {
           'Authorization': `Bearer ${JSON.parse(localStorage.getItem('currentUser')).access_token}`
         }
     }
     
-    let apiUrl = 'https://backend.smokoff.me/api/userplan/1';// + this.user.id;
+    let apiUrl = 'https://backend.smokoff.me/api/userplan/'+ this.user.id;
     // return API response from userplan
-    return this.http.get<UserPlan[]>(apiUrl, headers).pipe(map(r => {return r}));
+    return this.http.get<UserPlan[]>(apiUrl, options).pipe(map(r => {return r}));
   }
 
   getPlans() {

@@ -4,25 +4,32 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
         <div class="testbox">
           <h2 class="login_statement">REGISTER</h2>
-          <form action="/">
-          <label id="icon" for="first_name"><i class="fas fa-user"></i></label>
-          <input type="text" name="first_name" id="first_name" placeholder="First Name" required/>
-          <label id="icon" for="last_name"><i class="fas fa-user"></i></label>
-          <input type="text" name="last_name" id="last_name" placeholder="Last Name" required/>
-          <label id="icon" for="birthday"><i class="fas fa-calendar-day"></i></label>
-          <input type="date" name="birthday" id="birthday" placeholder="Birthday" required/>
-          <label id="icon" for="email"><i class="fas fa-envelope"></i></label>
-          <input type="email" name="email" id="email" placeholder="Email" required/>
-          <label id="icon" for="password"><i class="fas fa-key"></i></label>
-          <input type="password" name="password" id="password" placeholder="Password" required/>
-          <div class="gender">
-            <input type="radio" value="None" id="male" name="gender" />
-            <label for="male" class="radio" chec>Male</label>
-            <input type="radio" value="None" id="female" name="gender" />
-            <label for="female" class="radio">Female</label>
-          </div> 
-          <a routerLink="../login"> <p>Have an account? Login</p></a>
-          <a href="#" class="button">Register</a>
+          <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            <label id="icon" for="first_name"><i class="fas fa-user"></i></label>
+            <input type="text" formControlName="first_name" name="first_name" id="first_name" placeholder="First Name" required/>
+
+            <label id="icon" for="last_name"><i class="fas fa-user"></i></label>
+            <input type="text" formControlName="last_name" name="last_name" id="last_name" placeholder="Last Name" required/>
+
+            <label id="icon" for="birthday"><i class="fas fa-calendar-day"></i></label>
+            <input type="date" formControlName="birthday" name="birthday" id="birthday" placeholder="Birthday" required/>
+
+            <label id="icon" for="email"><i class="fas fa-envelope"></i></label>
+            <input type="email" formControlName="email" name="email" id="email" placeholder="Email" required/>
+
+            <label id="icon" for="password"><i class="fas fa-key"></i></label>
+            <input type="password" formControlName="password" name="password" id="password" placeholder="Password" required/>
+
+            <div class="gender">
+              <input type="radio" formControlName="gender" value="Male" id="male" name="gender" required/>
+              <label for="male" class="radio">Male</label>
+              <input type="radio" formControlName="gender" value="Female" id="female" name="gender" required/>
+              <label for="female" class="radio">Female</label>
+            </div> 
+
+            <a routerLink="../login"> <p>Have an account? Login</p></a>
+            <a href="#" class="button">Register</a>
           </form>
         </div>
       </form>

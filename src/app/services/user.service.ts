@@ -9,14 +9,14 @@ export class UserService {
     // get user function
     getUser() {
         // set token to headers
-        let headers = {
+        let options = {
             headers: {
               'Authorization': `Bearer ${JSON.parse(localStorage.getItem('currentUser')).access_token}`
             }
         }
         
         // get method to get user info
-        return this.http.get<User>('https://backend.smokoff.me/api/auth/me', headers)
+        return this.http.get<User>('https://backend.smokoff.me/api/auth/me', options)
         .pipe(map(r => {return r}));
     }
 }

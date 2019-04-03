@@ -21,10 +21,11 @@ export class PlannerComponent implements OnInit {
     this.titleService.setTitle('Smokoff | Planner');  // set title page
     this.userService.getUser().subscribe(user => {    // get user
       this.user = user;
+      this.planService.getUserPlans().subscribe(userplan =>{  // get userplan
+        this.userplans = userplan;
+      });
     }); 
-    this.planService.getUserPlans().subscribe(userplan =>{  // get userplan
-      this.userplans = userplan;
-    });
+    
     this.planService.getPlans().subscribe(plan => {
       this.plan = plan;
     });
