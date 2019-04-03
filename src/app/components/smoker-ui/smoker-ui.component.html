@@ -13,8 +13,14 @@
 			<div class="col-lg">
 				<div class="card card-body h-100">
 					<h2 class="card-title">Today's Plan</h2>
-					<h3>Plan a</h3>
-					<p>Plan_descriptions</p>
+					<ng-container *ngFor="let userplan of userplans">
+						<ng-container *ngIf="userplan.date == date">
+							<h3>{{userplan.date}}</h3>
+							<h4>Plan {{plan[userplan.plan_id-1].type}}</h4>
+							<p>{{plan[userplan.plan_id-1].plan_description}}</p>
+						</ng-container>						
+					</ng-container>
+					
 					<a class="btn btn-danger mt-auto" routerLink="planner"><i class="fas fa-eye"></i> All Plans</a>
 				</div>
 			</div>
