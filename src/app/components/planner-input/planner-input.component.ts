@@ -73,7 +73,7 @@ export class PlannerInputComponent implements OnInit {
 		  	// if error
 		  	error => {
 				this.error = error;
-			  	console.log(this.error);
+			  	// console.log(this.error);
 		  	});
 	}
 
