@@ -55,7 +55,7 @@ export class RegisterComponent implements OnInit {
       this.f.gender.value)
 		.subscribe(
 			data => {
-				this.router.navigate(['/login']); // after submit navigate to this url
+				this.router.navigate(['/auth/login']); // after submit navigate to this url
 				
 			},
 			  
@@ -69,11 +69,6 @@ export class RegisterComponent implements OnInit {
   
   sendRegForm(fname:string, lname:string, email:string, password:string, birthday:Date, gender:string){
 		// set token to headers
-		let options = {
-			headers: {
-				'Authorization': `Bearer ${JSON.parse(localStorage.getItem('currentUser')).access_token}`
-			}
-		}
 		// set body
 		let body = {
 			'first_name': fname,
@@ -86,7 +81,7 @@ export class RegisterComponent implements OnInit {
 
 		let apiUrl = 'https://backend.smokoff.me/api/register';
 		// return API response from userplan
-		return this.http.post<any>(apiUrl, body, options)
+		return this.http.post<any>(apiUrl, body)
 		.pipe(map(r => {return r}));
 	}
 }

@@ -29,7 +29,7 @@
             </div> 
 
             <a routerLink="../login"> <p>Have an account? Login</p></a>
-            <a href="#" class="button">Register</a>
+            <button type="submit" [disabled]="!registerForm.valid" class="btn btn-danger">Register</button>
           </form>
         </div>
       </form>
